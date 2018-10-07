@@ -1,0 +1,9 @@
+# MyConfig
+"\C-n":history-search-forward
+"\C-p":history-search-backward
+#"\C-o":forward-word # 有効にしたらTab効かなくなる
+#"\C-i":backward-word # 有効にしたらTab効かなくなる
+"\e[1;5A":history-search-forward
+"\e[1;5B":history-search-backward
+"\e[1;5C":forward-word
+"\e[1;5D":backward-word
