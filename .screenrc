@@ -1,7 +1,7 @@
 # Prefix Key
 #escape ^Jj
-#escape ^Bb
-escape ^Hh
+escape ^Bb
+#escape ^Hh
 
 # Character Code
 defutf8 on
@@ -27,11 +27,12 @@ defbce on
 termcapinfo xterm* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
 # set statusbar
-shelltitle "$ |${HOSTNAME}"
-# format                   time                   title selected title         load
-#hardstatus alwayslastline "%{= gk}[%m/%d %02c:%s] %{gk} %-w%{= GK}%n %t%{-}%+w %=%{gk}%l"
-#hardstatus alwayslastline "%{= ck}[%m/%d %02c:%s] %{ck} %-w%{= CK}%n %t%{-}%+w %=%{ck}%l"
-hardstatus alwayslastline "%{= yk}[%m/%d %02c:%s] %{yk} %-w%{= YK}%n %t%{-}%+w %=%{yk}%l"
+shelltitle "$ |bash"
+
+# format
+#hardstatus alwayslastline "%{= gk}[%m/%d %02c:%s] %{gk} %-w%{=u GK}%n %t%{-} %+w %=%{gk}%l"
+hardstatus alwayslastline "%{= ck}[%m/%d %02c:%s] %{ck} %-w%{=u CK}%n %t%{-} %+w %=%{ck}%l"
+#hardstatus alwayslastline "%{= yk}[%m/%d %02c:%s] %{yk} %-w%{=u YK}%n %t%{-} %+w %=%{yk}%l"
 hardstatus off
 
 # Default Shell

@@ -14,6 +14,10 @@ alias which='alias | which --tty-only --read-alias --show-dot --show-tilde'
 PATH=$PATH:$HOME/bin
 export PATH
 
+# Start ssh-agent
+eval $(ssh-agent)
+ssh-add ~/.ssh/github_rsa
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
