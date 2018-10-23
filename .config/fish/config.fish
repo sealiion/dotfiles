@@ -8,8 +8,8 @@ alias lll='ls -al --color=auto'
 alias grep='grep --color=auto'
 
 # Start ssh-agent
-eval (ssh-agent -c)
-ssh-add ~/.ssh/github_rsa
+#eval (ssh-agent -c)
+#ssh-add ~/.ssh/github_rsa
 
 # Add path
 # TODO /$HOME/bin/フォルダが無ければ作成するように設定する
@@ -19,6 +19,6 @@ set -g -x PATH /usr/local/bin $HOME/bin $PATH
 set -x LANG ja_JP.UTF-8
 
 # Exit shells
-function on_exit --on-process %self
-    ssh-agent -k
-end
+#function on_exit --on-process %self
+#    ssh-agent -k
+#end
