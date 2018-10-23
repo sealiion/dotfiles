@@ -1,12 +1,17 @@
 syntax on
 colorscheme molokai
 
-set fenc=utf-8
+set enc=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
+
 " タブ、行末スペースなどを可視化した時に表示する記号
-set listchars=eol:$,tab:>\-,trail:-,extends:>,precedes:<,nbsp:%
-" 全角スペースの可視化(行末スペースの可視化と同時に設定できない)
-hi ZenkakuSpace cterm=underline ctermfg=lightblue ctermbg=white
-match ZenkakuSpace /　/
+set listchars=eol:↲,tab:>\-,trail:-,extends:>,precedes:<,nbsp:%
+set list
+
+" 全角スペースの背景を白に変更
+autocmd Colorscheme * highlight FullWidthSpace ctermbg=white
+autocmd VimEnter * match FullWidthSpace /　/
 
 set expandtab
 set tabstop=4
@@ -37,8 +42,12 @@ set wildmenu
 set showcmd
 nnoremap sp :set paste<CR>
 nnoremap np :set nopaste<CR>
+
 nnoremap sn :set number<CR>
 nnoremap nnum :set nonumber<CR>
+
+nnoremap sl :set list<CR>
+nnoremap nli :set nolist<CR>
 
 ""dein Scripts-----------------------------
 "if &compatible
