@@ -1,5 +1,8 @@
 # .bashrc
 
+# Export TERM
+export TERM=xterm
+
 # Add alias
 alias rm='rm -i'
 alias cp='cp -i'
