@@ -1,4 +1,7 @@
 syntax on
+autocmd ColorScheme * highlight Comment ctermfg=100
+"autocmd ColorScheme * highlight Normal ctermfg=none
+"autocmd ColorScheme * highlight LineNr ctermfg=none
 colorscheme molokai
 
 set enc=utf-8
