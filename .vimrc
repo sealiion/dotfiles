@@ -43,14 +43,13 @@ set autoread
 
 set wildmenu
 set showcmd
+
 nnoremap sp :set paste<CR>
-nnoremap np :set nopaste<CR>
-
-nnoremap sn :set number<CR>
-nnoremap nnum :set nonumber<CR>
-
 nnoremap sl :set list<CR>
-nnoremap nli :set nolist<CR>
+nnoremap np :set nopaste<CR>
+nnoremap nl :set nolist<CR>
+nnoremap sn :set number<CR>
+nnoremap nnum :set nonumber<CR>: set nolist<CR>
 
 ""dein Scripts-----------------------------
 "if &compatible
