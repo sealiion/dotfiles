@@ -6,6 +6,7 @@ alias l='ls -al --color=auto'
 alias ll='ls -al --color=auto'
 alias lll='ls -al --color=auto'
 alias grep='grep --color=auto'
+alias lessf='less +F'
 
 # Start ssh-agent
 #eval (ssh-agent -c)
