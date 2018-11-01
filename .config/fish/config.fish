@@ -7,6 +7,7 @@ alias ll='ls -al --color=auto'
 alias lll='ls -al --color=auto'
 alias grep='grep --color=auto'
 alias lessf='less +F'
+alias py='python3.6'
 
 # Start ssh-agent
 #eval (ssh-agent -c)
