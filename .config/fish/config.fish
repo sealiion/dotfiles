@@ -7,6 +7,8 @@ alias ll='ls -al --color=auto'
 alias lll='ls -al --color=auto'
 alias grep='grep --color=auto'
 alias lessf='less +F'
+alias py2='python2'
+alias py3='python3'
 alias py='python3'
 alias man='env LANG=ja_JP.utf8 man'
 
