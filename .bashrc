@@ -12,6 +12,7 @@ alias ll='ls -al --color=auto'
 alias lll='ls -al --color=auto'
 alias grep='grep --color=auto'
 alias lessf='less +F'
+alias man='env LANG=ja_JP.utf8 man'
 #alias which='alias | which --tty-only --read-alias --show-dot --show-tilde'
 
 # Add path
