@@ -16,7 +16,7 @@ alias man='env LANG=ja_JP.utf8 man'
 #alias which='alias | which --tty-only --read-alias --show-dot --show-tilde'
 
 # Add path
-PATH=$PATH:$HOME/bin
+PATH=$HOME/bin:$PATH
 export PATH
 
 # Start ssh-agent
