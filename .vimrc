@@ -59,6 +59,7 @@ nnoremap np :set nopaste<CR>
 nnoremap nl :set nolist<CR>
 nnoremap sn :set number<CR>
 nnoremap nnum :set nonumber<CR>: set nolist<CR>
+nnoremap ap :set paste<CR>ggdGi
 
 ""dein Scripts----------------------------------------------------------
 "if &compatible
