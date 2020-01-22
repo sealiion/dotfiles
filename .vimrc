@@ -16,6 +16,7 @@ set list
 autocmd Colorscheme * highlight FullWidthSpace ctermbg=white
 autocmd VimEnter * match FullWidthSpace /　/
 
+" 拡張子ごとにタブ数を指定
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -31,21 +32,22 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
-set cursorline
+" スクロール関連
+"set cursorline 重くなる
+set scrolloff=5
+set scrollopt=ver,hor,jump
+set scrollbind
+
 set number
+set guioptions+=b
+
 highlight LineNr ctermfg=cyan
-"set title
+set title
 
 set incsearch
 set smartcase
 set hlsearch
 set showmatch
-
-set backspace=indent,eol,start
-inoremap <C-a> <Esc>^i
-inoremap <C-e> <Esc>$a
-noremap <C-a> <Esc>^i
-noremap <C-e> <Esc>$a
 
 set noswapfile
 set autoread
@@ -53,13 +55,38 @@ set autoread
 set wildmenu
 set showcmd
 
+set backspace=indent,eol,start
+
+" マウス
+set mouse=a
+set ttymouse=xterm2
+
+" バインド
+ noremap <C-a> <Esc>^i
+inoremap <C-a> <Esc>^i
+ noremap <C-e> <Esc>$a
+inoremap <C-e> <Esc>$a
+ noremap <C-z> <Esc>u
+inoremap <C-z> <Esc>u
+ noremap <C-ScrollWheelUp> <Esc>zh
+inoremap <C-ScrollWheelUp> <Esc>zh
+ noremap <C-ScrollWheelDown> <Esc>zl
+inoremap <C-ScrollWheelDown> <Esc>zl
+
+ noremap <C-S-Left> <Esc><C-w>100<<CR>
+inoremap <C-S-Left> <Esc><C-w>100<<CR>
+ noremap <C-S-Right> <Esc><C-w>100><CR>
+inoremap <C-S-Right> <Esc><C-w>100><CR>
+ noremap <C-S-Up> <Esc><C-w>==<CR>
+inoremap <C-S-Up> <Esc><C-w>==<CR>
+
 nnoremap sp :set paste<CR>
-nnoremap sl :set list<CR>
-nnoremap np :set nopaste<CR>
-nnoremap nl :set nolist<CR>
-nnoremap sn :set number<CR>
-nnoremap nnum :set nonumber<CR>: set nolist<CR>
+nnoremap <Tab>w :set nonumber<CR>: set nolist<CR>
+nnoremap <Tab>e :set number<CR>: set list<CR>
+nnoremap <Tab>q :q! <CR>
 nnoremap ap :set paste<CR>ggdGi
+cnoremap w!! w !sudo tee > /dev/null %<CR> :e!<CR>
+cnoremap q! qa!<CR>
 
 ""dein Scripts----------------------------------------------------------
 "if &compatible
