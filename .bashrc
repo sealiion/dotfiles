@@ -7,11 +7,11 @@ export TERM=xterm
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias l='ls -al --color=auto'
-alias ll='ls -al --color=auto'
-alias lll='ls -al --color=auto'
-alias grep='grep --color=auto'
-alias lessf='less +F'
+alias l='ls -al --color=always'
+alias ll='ls -al --color=always'
+alias lll='ls -al --color=always'
+alias grep='grep --color=always'
+alias lessf='less +RF'
 alias man='env LANG=ja_JP.utf8 man'
 #alias which='alias | which --tty-only --read-alias --show-dot --show-tilde'
 
@@ -25,5 +25,5 @@ export PATH
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+        . /etc/bashrc
 fi
